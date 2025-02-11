@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>João e Ana - Meu Portfólio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #800020; /* Cor Bordô */
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    h1 {
+      font-size: 3em;
+      margin: 0;
+      font-family: 'Dancing Script', cursive; /* Fonte bonita */
+    }
+    .counter {
+      font-size: 1.5em;
+      margin-top: 10px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .container {
+      width: 80%;
+      margin: 20px auto;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .about {
+      margin-top: 30px;
+      text-align: center;
+    }
+    .about h2 {
+      margin-bottom: 10px;
+    }
+    footer {
+      background-color: #800020; /* Cor Bordô */
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+  <script>
+    // Função para calcular o número de dias, horas, minutos e segundos desde 18:00h do dia 11/01/2025
+    function updateCounter() {
+      const startDate = new Date('2025-01-11T18:00:00'); // Data inicial
+      const currentDate = new Date(); // Data atual
+      const timeDifference = currentDate - startDate; // Diferença de tempo
+
+      const days = Math.floor(timeDifference / (1000 * 3600 * 24)); // Dias
+      const hours = Math.floor((timeDifference % (1000 * 3600 * 24)) / (1000 * 3600)); // Horas
+      const minutes = Math.floor((timeDifference % (1000 * 3600)) / (1000 * 60)); // Minutos
+      const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000); // Segundos
+
+      document.getElementById('counter').textContent = `Juntos há: ${days} dias, ${hours} horas, ${minutes} minutos e ${seconds} segundos`;
+    }
+
+    setInterval(updateCounter, 1000); // Atualiza o contador a cada segundo
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>João e Ana</h1>
+    <div class="counter" id="counter">Carregando contador...</div>
+  </header>
+
+  <div class="container">
+    <section class="gallery">
+      <img src="1.jpg" alt="Foto 1">
+      <img src="2.jpg" alt="Foto 2">
+      <img src="3.jpg" alt="Foto 3">
+      <img src="4.jpg" alt="Foto 4">
+      <img src="5.jpg" alt="Foto 4">
+      <img src="7.jpg" alt="Foto 3">
+      <img src="8.jpg" alt="Foto 4">
+      <img src="6.jpg" alt="Foto 4">
+    </section>
+
+    <section class="about">
+     
+      <p>
+      É incrivel amar você &#10084
+        
+        .</p>
+    </section>
+  </div>
+
+
+
+</body>
+</html>
